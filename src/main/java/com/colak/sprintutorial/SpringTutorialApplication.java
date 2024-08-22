@@ -1,13 +1,13 @@
-package com.colak.springschedulertutorial;
+package com.colak.sprintutorial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringSchedulerTutorialApplication {
+public class SpringTutorialApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSchedulerTutorialApplication.class, args);
+		SpringApplication.run(SpringTutorialApplication.class, args);
 	}
 
 }

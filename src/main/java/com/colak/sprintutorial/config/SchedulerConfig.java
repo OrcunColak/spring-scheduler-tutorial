@@ -1,6 +1,6 @@
-package com.colak.springschedulertutorial.config;
+package com.colak.sprintutorial.config;
 
-import com.colak.springschedulertutorial.dynamictaskscheduler.DynamicTaskScheduler;
+import com.colak.sprintutorial.dynamictaskscheduler.DynamicTaskScheduler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

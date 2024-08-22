@@ -1,4 +1,4 @@
-package com.colak.springschedulertutorial.dynamictaskscheduler;
+package com.colak.sprintutorial.dynamictaskscheduler;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
