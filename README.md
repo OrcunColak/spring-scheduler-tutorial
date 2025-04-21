@@ -7,7 +7,7 @@ spring:
       pool:
         size: 5
 ```
-For example
+When virtual threads are enabled :
 ```java
 import org.springframework.boot.autoconfigure.task.TaskSchedulingProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -42,6 +42,24 @@ public class SchedulerConfig {
     }
 }
 
+```
+Remember the scheduler and async executors are different. For scheduler we are creating a bean with name taskScheduler, for async we are creating a bean with name taskExecutor. First one uses ThreadPoolTaskScheduler,
+and latter uses ThreadPoolTaskExecutor
+```java
+@Configuration
+public class AsyncConfig {
+
+    @Bean(name = "customExecutor")
+    public Executor taskExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(4);
+        executor.setMaxPoolSize(10);
+        executor.setQueueCapacity(100);
+        executor.setThreadNamePrefix("Async-");
+        executor.initialize();
+        return executor;
+    }
+}
 ```
 # Cron
 
